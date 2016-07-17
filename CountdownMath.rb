@@ -5,6 +5,7 @@ until exit == true
 	inputValid = false
 	array = Array.new(0)
 	small = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10]
+	large = [25,25,50,50,75,75,100,100]
 
 
 
@@ -22,13 +23,14 @@ until exit == true
 	end
 	
 	i = 0
-
+	large_max = 7
 	until i == numberOfLarge
-		array[i] = rand(10...100)
+	
+		random_index = rand(0..large_max)
+		array[i] = large[random_index]
+		large.delete_at(random_index)
+		large_max -= 1
 
-		until array[i]%25 == 0
-			array[i] = rand(10...100)
-		end
 
 		i += 1
 	end
