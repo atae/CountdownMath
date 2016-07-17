@@ -34,7 +34,7 @@ until exit == true
 
 	until i == 6
 
-			array[i] = rand(1..9)
+		array[i] = rand(1..9)
 
 		i += 1
 	end
