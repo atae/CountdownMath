@@ -24,7 +24,7 @@ until exit == true
 	until i == numberOfLarge
 		array[i] = rand(10...100)
 
-		until array[i]%5 == 0
+		until array[i]%25 == 0
 			array[i] = rand(10...100)
 		end
 
