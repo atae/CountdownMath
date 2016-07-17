@@ -4,6 +4,8 @@ exit = false
 until exit == true
 	inputValid = false
 	array = Array.new(0)
+	small = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10]
+
 
 
 	until inputValid == true
@@ -30,13 +32,18 @@ until exit == true
 
 		i += 1
 	end
-
+	max = 19
 
 	until i == 6
 
-		array[i] = rand(1..9)
+		random_index = rand(0..max)
+	
 
+		array[i] = small[random_index]
+		small.delete_at(random_index)
+		max -= 1
 		i += 1
+
 	end
 	i = 0
 
